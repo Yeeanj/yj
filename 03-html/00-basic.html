@@ -6,7 +6,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>NAVER</title>
+  <title>네이버</title>
   <meta property="og:title" content="네이버">
   <meta property="og:description" content="네이버 메인에서 다양한 정보와 유용한 컨텐츠를 만나 보세요">
   <meta property="og:image" content="https://s.pstatic.net/static/www/mobile/edit/2016/0705/mobile_212852414260.png">
@@ -65,7 +65,142 @@
       <h2>link 태그</h2>
     </header>
     <section>
-      <a href="https://www.w3schools.com/html/html_links.asp" target="_blank">HTML Link</a>
+      <!-- 절대경로 -->
+      <a href="https://naver.com" target="_blank">HTML Link</a>
+      <!-- 상대경로 -->
+      <a href="./01-layout.html">layout.html</a>
+      <a href="./images/01-01-pink-flower.jpg">pink daisy image</a>
+      <a href="images/01-01-pink-flower.jpg">daisy image2</a>
+      <a href="mailto:seaju0527@naver.com">seaju0527@naver.com</a>
+      <!-- 웹접근성 -->
+      <a href="https://www.naver.com" target="_blank" title="새창열림">네이버</a>
+      <a href="#main">main 바로가기</a>
+      <a href="./sub/sub.html#sec3">sub.html > id 값이 sec3 바로가기</a>
+    </section>
+    <header>
+      <h2>images 태그</h2>
+    </header>
+    <section>
+      <!-- 상대경로 -->
+      <!-- width, height 속성엔 단위 생략 -->
+      <img src="./images/01-01-pink-flower.jpg" alt="pinkflower" width="200">
+      <img src="./images/01-01-pink-flower.jpg" alt="pinkflower" style="width: 300px;">
+      <!-- 절대경로 -->
+      <a href="https://www.rankingdak.com/promotion/exhibit/list?utm_source=timeboard&utm_medium=DA&utm_campaign=mainbranding&utm_content=&utm_term=6_3_A" target="_blank" title="새창열림">
+        <img src="https://ssl.pstatic.net/melona/libs/1448/1448051/1dd762589f6ffe1f6a67_20230609164251805.jpg" alt="랭킹닭컴 근육절 D-1 내일이 마지막! 닭가슴살 핫도그 53%할인" width="100%">
+      </a>
+
+      <!-- 반응형 이미지 -->
+      <picture>
+        <!-- width가 650px 이상일 경우 -->
+        <source media="(min-width: 650px)" srcset="images\food.jpg">
+        <!-- width가 465PX 이상일 경우-->
+        <source media="(min-width: 465px)" srcset="./images/img_car.jpg">
+        <img src="./images/img_girl.jpg" alt="여자뒤통수" width="100%">
+      </picture>
+    </section>
+
+    <header>
+      <h2>table 태그</h2>
+    </header>
+    <section>
+      <table>
+        <!-- 웹접근성 요건 추가 -->
+        <caption>테이블 설명 : 자세한 설명</caption>
+        <colgroup>
+          <col width="40%">
+          <col span="3"> <!-- span : 열의 갯수 -->
+        </colgroup>
+        <thead>
+          <tr>
+            <td>이름</td>
+            <td>국어</td>
+            <td>영어</td>
+            <td>수학</td>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>이민형</td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>나재민</td>
+            <td>열2</td>
+            <td>열3</td>
+            <td>열4</td>
+          </tr>
+          <tr>
+            <td>이동혁</td>
+            <td>열2</td>
+            <td>열3</td>
+            <td>열4</td>
+          </tr>
+          <tr>
+            <td>박지성</td>
+            <td>열2</td>
+            <td>열3</td>
+            <td>열4</td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <td>합계</td>
+            <td>열2</td>
+            <td>열3</td>
+            <td>열4</td>
+          </tr>
+        </tfoot>
+      </table>
+    </section>
+    <style>
+      table, tr, td {
+        border : 3px solid hsl(234, 99%, 48%);
+      }
+      table {
+        width: 100%;
+      }
+      td {
+        height: 50px;
+      }
+    </style>
+
+
+
+    <section id="#nav">
+      <h2>nav</h2>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate molestiae, hic quis incidunt asperiores perferendis mollitia dolor earum aperiam odit tempora ipsum voluptatem, pariatur repudiandae tempore illum provident et ratione?</p>
+    </section>
+    <section>
+      <h2>c1</h2>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate molestiae, hic quis incidunt asperiores perferendis mollitia dolor earum aperiam odit tempora ipsum voluptatem, pariatur repudiandae tempore illum provident et ratione?</p>
+    </section>
+    <section>
+      <h2>c1</h2>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate molestiae, hic quis incidunt asperiores perferendis mollitia dolor earum aperiam odit tempora ipsum voluptatem, pariatur repudiandae tempore illum provident et ratione?</p>
+    </section>
+    <section>
+      <h2>c1</h2>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate molestiae, hic quis incidunt asperiores perferendis mollitia dolor earum aperiam odit tempora ipsum voluptatem, pariatur repudiandae tempore illum provident et ratione?</p>
+    </section>
+    <section>
+      <h2>c1</h2>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate molestiae, hic quis incidunt asperiores perferendis mollitia dolor earum aperiam odit tempora ipsum voluptatem, pariatur repudiandae tempore illum provident et ratione?</p>
+    </section>
+    <section>
+      <h2>c1</h2>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate molestiae, hic quis incidunt asperiores perferendis mollitia dolor earum aperiam odit tempora ipsum voluptatem, pariatur repudiandae tempore illum provident et ratione?</p>
+    </section>
+    <section>
+      <h2>c1</h2>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate molestiae, hic quis incidunt asperiores perferendis mollitia dolor earum aperiam odit tempora ipsum voluptatem, pariatur repudiandae tempore illum provident et ratione?</p>
+    </section>
+    <section id="main">
+      <h2>Main</h2>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate molestiae, hic quis incidunt asperiores perferendis mollitia dolor earum aperiam odit tempora ipsum voluptatem, pariatur repudiandae tempore illum provident et ratione?</p>
+      <a href="#nav">nav</a>
     </section>
   </div>
   <!-- 주석 태그 -->
