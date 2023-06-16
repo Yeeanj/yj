@@ -6,7 +6,6 @@
   <title>Just쇼핑몰</title>
 </head>
 <body>
-  
   <div class="wrap">
     <header class="header">
       <!-- 로고 -->
@@ -20,69 +19,36 @@
           <li>
             <a href="#">탑</a>
             <ul class="depth2">
-              <li>
-                <a href="#">블라우스</a>
-              </li>
-              <li>
-                <a href="#">티</a>
-              </li>
-              <li>
-                <a href="#">셔츠</a>
-              </li>
-              <li>
-                <a href="#">니트</a>
-              </li>
+              <li><a href="#">블라우스</a></li>
+              <li><a href="#">티</a></li>
+              <li><a href="#">셔츠</a></li>
+              <li><a href="#">니트</a></li>
             </ul>
           </li>
           <li>
             <a href="#">아우터</a>
             <ul class="depth2">
-              <li>
-                <a href="#">자켓</a>
-              </li>
-              <li>
-                <a href="#">코트</a>
-              </li>
-              <li>
-                <a href="#">가디건</a>
-              </li>
-              <li>
-                <a href="#">머플러</a>
-              </li>
+              <li><a href="#">자켓</a></li>
+              <li><a href="#">코트</a></li>
+              <li><a href="#">가디건</a></li>
+              <li><a href="#">머플러</a></li>
             </ul>
           </li>
-          <li>
-            <a href="#">팬츠</a>
+          <li><a href="#">팬츠</a>
             <ul class="depth2">
-              <li>
-                <a href="#">청바지</a>
-              </li>
-              <li>
-                <a href="#">짧은바지</a>
-              </li>
-              <li>
-                <a href="#">긴바지</a>
-              </li>
-              <li>
-                <a href="#">레깅스</a>
-              </li>
+              <li><a href="#">청바지</a></li>
+              <li><a href="#">짧은바지</a></li>
+              <li><a href="#">긴바지</a></li>
+              <li><a href="#">레깅스</a></li>
             </ul>
           </li>
           <li>
             <a href="#">악세서리</a>
             <ul class="depth2">
-              <li>
-                <a href="#">귀고리</a>
-              </li>
-              <li>
-                <a href="#">목걸이</a>
-              </li>
-              <li>
-                <a href="#">반지</a>
-              </li>
-              <li>
-                <a href="#">팔찌</a>
-              </li>
+              <li><a href="#">귀고리</a></li>
+              <li><a href="#">목걸이</a></li>
+              <li><a href="#">반지</a></li>
+              <li><a href="#">팔찌</a></li>
             </ul>
           </li>
         </ul>
@@ -99,11 +65,42 @@
         <div class="tabs">
           <section class="bbs">
             <h3>공지사항</h3>
-            <div class="cont">공지사항 내용</div>
+            <div class="cont">
+              <!-- 텍스트 리스트 -->
+              <ul class="lst-bbs">
+                <li><a href="#">[공지] 배송비 변경 안내 (2022.12.01~)</a></li>
+                <li><a href="#">[공지] 이용약관 수정 안내 (2022.03.24 시행)</a></li>
+                <li><a href="#">[안내] 6/6 (현충일) 고객센터 휴무 안내</a></li>
+                <li><a href="#">상품별 사이즈 측정법 안내</a></li>
+                <li><a href="#">JUST와 함께 할 모델을 찾고 있어요!</a></li>
+              </ul>
+            </div>
           </section>
           <section class="gallery">
             <h3>갤러리</h3>
-            <div class="cont">갤러리 내용</div>
+            <div class="cont">
+              <!-- 썸네일 리스트 -->
+              <ul class="lst-gellery">
+                <li>
+                  <a href="#">
+                  <img src="이미지경로" alt="">
+                  <p>오츠 썸머 스트링 링클후드블라우스</p>
+                </a>
+                </li>
+                <li>
+                  <a href="#">
+                  <img src="이미지경로" alt="">
+                  <p>바헨 브이넥 반팔 트위드원피스</p>
+                </a>
+                </li>
+                <li>
+                  <a href="#">
+                  <img src="이미지경로" alt="">
+                  <p>데어 뒷밴딩 앞주름 반바지 슬랙스</p>
+                </a>
+                </li>
+              </ul>
+            </div>
           </section>
         </div>
         <!-- 배너 -->
@@ -130,21 +127,21 @@
       <div class="copyright">copyright</div>
       <div class="sns">
         <ul>
-          <li>
-            <a href="#">instagram</a>
-          </li>
-          <li>
-            <a href="#">facebook</a>
-          </li>
-          <li>
-            <a href="#">youtube</a>
-          </li>
-          <li>
-            <a href="#">blog</a>
-          </li>
+          <li><a href="#">instagram</a></li>
+          <li><a href="#">facebook</a></li>
+          <li><a href="#">youtube</a></li>
+          <li><a href="#">blog</a></li>
         </ul>
       </div>
     </footer>
+  </div>
+  <!-- modal --> <!-- dim - 뒷 배경 흐릿하게, 스크립트 : id, 디자인 : class -->
+  <div id="modal" class="dimmed">
+    <div class="modal-box">
+      <h3>모달 창 제목</h3>
+      <p>모달 창 내용</p>
+      <button>닫기</button>
+    </div>
   </div>
 </body>
 </html>
