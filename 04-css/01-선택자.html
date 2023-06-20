@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>선택자 | css</title>
+  </head>
+  <body>
+    <h1>선택자</h1>
+
+    <h2>태그 선택자</h2>
+    <div id="gnb">
+      <ul class="depth1">
+        <li class="fst">
+          <a href="#">메뉴 1</a>
+          <ul class="depth2-1">
+            <li><a href="#">메뉴 1-1</a></li>
+            <li><a href="#">메뉴 1-2</a></li>
+          </ul>
+        </li>
+        <li class="scd">
+          <a href="#">메뉴 2</a>
+          <ul class="depth2-2">
+            <li><a href="#">메뉴 2-1</a></li>
+            <li><a href="#">메뉴 2-2</a></li>
+          </ul>
+        </li>
+        <li class="tud">
+          <a href="#">메뉴 3</a>
+          <ul class="depth2-3">
+            <li><a href="#">메뉴 3-1</a></li>
+            <li><a href="#">메뉴 3-2</a></li>
+          </ul>
+        </li>
+        <li class="lst">
+          <a href="#">메뉴 4</a>
+          <ul class="depth2-4">
+            <li><a href="#">메뉴 4-1</a></li>
+            <li><a href="#">메뉴 4-2</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <style>
+      #gnb {
+        border: 3px solid tomato;
+      }
+      .depth2-1 {
+        border: 3px solid #ffd900;
+      }
+      ul {
+        border: 2px solid #413f3f;
+      }
+      .depth2-3 a {
+        border: 2px solid #ff5af7;
+      }
+      li {
+        background: #fff0f0;
+        margin: 10px;
+      }
+      ul li {
+        background: #e67676;
+      }
+      ul.depth1 > li {
+        background: #99bdf3;
+      }
+      ul.depth2-1 > li {
+        background: #ffd900;
+      }
+      .depth1 .lst > a,
+      .depth1 .fst > a {
+        background: red;
+      }
+      .depth2-2 .scd > a,
+      .depth2-3 .tud > a {
+        background: #3ce8f5;
+      }
+      /* class 선택 시 태그선택 주의, 띄어쓰기 = 손자코드, .(마침표) = 자식코드, ,(쉼표) = 코드 각 적용 */
+    </style>
+  </body>
+</html>
