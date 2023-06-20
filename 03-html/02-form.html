@@ -33,8 +33,9 @@
         </div>
       </div>
       <div class="terms_item">
-        <input type="checkbox" id="terms2" />
-        <label for="terms2">개인정보 수집 및 이용</label>
+        <input type="checkbox" id="terms2" required />
+        <!-- required : 필수선택 -->
+        <label for="terms2">[필수선택] 개인정보 수집 및 이용</label>
       </div>
       <!-- submit 버튼 클릭 시 상단에 있는 정보가 전송 -->
       <input type="submit" value="확인" id="btnsend2" name="btnsend2" />
@@ -49,7 +50,11 @@
           id="id"
           placeholder="10자 이하"
           maxlength="10"
+          required
+          autofocus
         />
+        <!-- placeholder : 가이드글자, maxlength : 글자수 조정 -->
+        <!-- autofocus : 자동 포커즈 -->
       </div>
       <div>
         <label for="password">비밀번호</label>
@@ -106,6 +111,7 @@
           readonly
           maxlength="11"
         />
+        <!-- readonly : 수정불가 -->
       </div>
       <input type="button" value="인증 요청" id="btnsend" name="btnsend" />
       <form action="">
@@ -121,7 +127,9 @@
           </div>
           <div>
             <label for="myfile">파일첨부</label>
-            <input type="file" id="myfile" name="myfile" multiple />
+            <input type="file" id="myfile" name="myfile" />
+            <input type="file" id="myfile2" name="myfile2" />
+            <!-- multiple : 파일 중복 첨부 -->
           </div>
           <button id="ok">저장</button>
           <input type="reset" value="취소" id="cancle" />
