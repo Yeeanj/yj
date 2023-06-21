@@ -9,6 +9,41 @@
     <h1>선택자</h1>
 
     <h2>태그 선택자</h2>
+
+    <div class="wrap">
+      wrap
+      <div class="util">util</div>
+      <header class="header">
+        header
+        <h1 class="logo">
+          <a href="#">logo</a>
+        </h1>
+        <nav class="gnb">nav</nav>
+      </header>
+    </div>
+    <style>
+      .wrap {
+        border: 5px solid purple;
+        background: #ff0000;
+      }
+      .util {
+        background: rgb(255, 255, 0, 0.5);
+      }
+      .header {
+        border: 5px solid pink;
+      }
+      .logo {
+        background: black;
+      }
+      .logo a {
+        font-size: 18px;
+        color: white;
+      }
+      .gnb {
+        border: 5px solid rgb(0, 0, 255, 0.5);
+      }
+    </style>
+    <br /><br /><br />
     <div id="gnb">
       <ul class="depth1">
         <li class="fst">
@@ -69,12 +104,13 @@
       }
       .depth1 .lst > a,
       .depth1 .fst > a {
-        background: red;
+        background: rgb(255, 0, 0);
       }
       .depth1 > li > a {
         background: #9bffb0;
       }
       /* class 선택 시 태그선택 주의, 띄어쓰기 = 손자코드, .(마침표) = 자식코드, ,(쉼표) = 코드 각 적용 */
+      /* RGB가 사용될 때 : 배경색에 투명을 넣을 경우 */
     </style>
   </body>
 </html>
