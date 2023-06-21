@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>가상선택자 | css</title>
+    <style>
+      /* reset */
+      * {
+        list-style-type: none;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>가상선택자</h1>
+    <h2>순서</h2>
+    <ul class="lst-">
+      <li>menu1</li>
+      <li>menu2</li>
+      <li>menu3</li>
+      <li>menu4</li>
+    </ul>
+    <style>
+      .lst- {
+        border: 5px solid greenyellow;
+      }
+      .lst- li {
+        border: 5px solid pink;
+        margin: 5px;
+      }
+      .lst- li:first-child {
+        background: skyblue;
+      }
+      .lst- li:nth-child(2) {
+        background: orange;
+      }
+      .lst- li:nth-child(3) {
+        background: blue;
+      }
+      .lst- li:nth-child(4) {
+        background: purple;
+      }
+      .lst- li:hover {
+        background: #000;
+        color: white;
+      } /* hovre : 상태코드, 마우스를 가져다댔을 때 나타나는 코드 */
+    </style>
+    <h2>링크가상선택자</h2>
+    <a href="#">링크가상선택자</a>
+    <style>
+      a {
+        font-size: 20px;
+        color: #000;
+      }
+      /* a:link {} = 잘 안씀 */
+      a:hover {
+        color: red;
+      }
+      a:active/* 누르고있으면 색 변함 */ {
+        color: green;
+        a:visited {
+        color: blue;
+      }/* visited = 링크활성화 후의 색(잘 안씀) */
+    </style>
+    <h2>가상 엘리먼트 선택자</h2>
+    <ul class="lst">
+      <li><a href="#">공지사항1</a></li>
+      <li><a href="#">공지사항2</a></li>
+      <li><a href="#">공지사항3</a></li>
+      <li><a href="#">공지사항4</a></li>
+    </ul>
+    <style>
+      .lst li::before {
+        content: "";
+        display: inline-block;
+        width: 8px;
+        height: 8px;
+        background: #ff7b7b;
+        border-radius: 10px;
+        margin-right: 10px;
+      }
+      .lst li::after {
+        content: "뒤";
+      }
+      .lst a {
+        color: red;
+      }
+      .lst a::before {
+        content: "before";
+      }
+      .lst a::after {
+        content: "";
+        display: inline-block;
+        width: 8px;
+        height: 8px;
+        background: blue;
+      }
+    </style>
+    <br /><br />
+    <ul class="lst2">
+      <li>menu1</li>
+      <li>menu2</li>
+      <li>menu3</li>
+      <li>menu4</li>
+    </ul>
+    <style>
+      /* dispaly: flex; = 강제로 가로 정렬 */
+      .lst2 {
+        display: flex;
+      }
+      .lst2 li::after {
+        content: ""; /* 도형만 넣을 경우 따옴표만 입력 */
+        display: inline-block;
+        width: 10px;
+        height: 10px;
+        background: orange;
+        border-radius: 10px; /* 테두리 둥글게 */
+        margin-left: 10px; /* 글자사이의 공간 */
+        margin-right: 10px;
+      }
+      .lst2 li:last-child :after {
+        content: "";
+        display: none;
+      } /* li 마지막 코드 잡는 법 : last-child (처음 : first-child) */
+      .lst2::before {
+        content: "";
+        display: inline-block;
+        width: 5px;
+        height: 30px;
+        background: red;
+        margin-right: 10px;
+      }
+      .lst2::after {
+        content: "";
+        display: inline-block;
+        width: 5px;
+        height: 30px;
+        background: red;
+        margin-left: 10px;
+      }
+    </style>
+  </body>
+</html>
