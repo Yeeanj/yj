@@ -1,0 +1,43 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  box-sizing: border-box;
+  text-decoration: none;
+  line-height: 1.5;
+  color: #222328;
+}
+.wrap {
+  width: 1200px;
+  background: lightblue;
+  margin: 0 auto;
+}
+.header {
+  height: 100px;
+  background: lightgray;
+  display: flex;
+  justify-content: space-between;
+}
+.logo {
+  display: flex;
+  align-items: center;
+}
+.logo a {
+  display: block;
+  width: 200px;
+  height: 40px;
+}
+.gnb .depth1 {
+  display: flex;
+}
+.gnb .depth1 a {
+  display: block; /* flex일 경우 */
+  line-height: 100px; /* align-items: center; */
+  height: 100px;
+  padding: 0px 50px;
+  text-align: center;
+}
+.gnb .depth2 {
+  display: none;
+}
