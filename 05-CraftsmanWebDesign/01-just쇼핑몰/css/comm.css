@@ -15,7 +15,7 @@
 }
 .header {
   height: 100px;
-  background: lightgray;
+  background: white;
   display: flex;
   justify-content: space-between;
 }
@@ -31,13 +31,63 @@
 .gnb .depth1 {
   display: flex;
 }
-.gnb .depth1 a {
+.gnb .depth1 > li > a {
   display: block; /* flex일 경우 */
   line-height: 100px; /* align-items: center; */
   height: 100px;
   padding: 0px 50px;
   text-align: center;
 }
+.gnb .depth1 > li > a:hover {
+  border-bottom: 3px solid black;
+  font-weight: bold;
+}
+.gnb .depth1:hover .depth2 {
+  display: block;
+}
 .gnb .depth2 {
   display: none;
+  background: white;
+  padding: 20px 0px;
+}
+.gnb .depth2 a {
+  display: block;
+  background: white;
+  text-align: center;
+  height: 40px;
+  line-height: 40px;
+}
+.gnb .depth2 > li > a:hover {
+  background: black;
+  /* border-bottom: 3px solid black; */
+  color: white;
+  font-weight: bold;
+}
+/* slide */
+.slide {
+  overflow: hidden;
+  height: 300px;
+}
+.slide a,
+.slide img {
+  display: block;
+}
+/* contents */
+.contents {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0px;
+}
+.tabs {
+  width: 380px;
+}
+.bnr {
+  width: 360px;
+}
+.bnr a,
+.bnr img {
+  display: block;
+}
+.goto {
+  width: 360px;
 }
