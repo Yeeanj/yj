@@ -79,7 +79,7 @@
   padding: 10px 0px;
 }
 .tabs {
-  width: 380px;
+  width: calc(100% / 2 - 230px);
 }
 .bnr {
   width: 360px;
@@ -89,5 +89,22 @@
   display: block;
 }
 .goto {
-  width: 360px;
+  width: calc(100% / 2 - 230px);
+}
+.goto ul {
+  display: flex;
+  justify-content: space-between;
+  align-content: space-between;
+  flex-wrap: wrap;
+  height: 180px;
+}
+.goto li {
+  height: calc(50% - 5px);
+  width: calc(50% - 5px);
+  background: gray;
+}
+.goto a {
+  display: block;
+  background: #ffffff;
+  height: 100%;
 }
