@@ -10,7 +10,6 @@
 }
 .wrap {
   width: 1200px;
-  background: lightblue;
   margin: 0 auto;
 }
 .header {
@@ -78,10 +77,79 @@
   justify-content: space-between;
   padding: 10px 0px;
 }
-.tabs {
+.tabs-wrap {
+  position: relative;
+  display: flex;
   width: calc(100% / 2 - 230px);
 }
-.bnr {
+.tabs-wrap .tab-item {
+  width: 50%;
+}
+/* 비활성화 tab */
+.tabs-wrap .tab-item .tit {
+  height: 30px;
+  padding-top: 5px;
+  border-bottom: 2px solid black;
+  background: lightgray;
+  text-align: center;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+/* 활성화 tab*/
+.tabs-wrap .on .tit {
+  background: black;
+  color: #ffffff;
+}
+.tabs-wrap .tab-item .cont {
+  display: none;
+  position: absolute;
+  top: 30px;
+  left: 0;
+  right: 0;
+  height: 130px;
+}
+.tabs-wrap .on .cont {
+  display: block;
+}
+.lst-bbs {
+  font-size: 14px;
+  padding-top: 8px;
+}
+.lst-bbs li {
+  display: flex;
+  align-self: center;
+}
+.lst-bbs li a {
+  display: block;
+  line-height: 2;
+}
+.lst-bbs li a:hover {
+  text-decoration: underline;
+}
+.lst-bbs li a::before {
+  content: "";
+  display: inline-block;
+  width: 5px;
+  height: 5px;
+  margin-top: -5px;
+  margin-right: 10px;
+  background: black;
+}
+/* 갤러리 */
+.lst-gellery {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 8px;
+}
+.lst-gellery li {
+  width: 98px;
+}
+.lst-gellery li p {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.tabs-wrap .bnr {
   width: 360px;
 }
 .bnr a,
@@ -105,6 +173,29 @@
 }
 .goto a {
   display: block;
-  background: #ffffff;
+  background: lightblue;
   height: 100%;
+}
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100px;
+  border-top: 1px solid #d7d7d7;
+}
+.logo-foot a {
+  display: flex;
+  align-items: center;
+  height: 100px;
+}
+.lst-sns {
+  display: flex;
+}
+.lst-sns li {
+  margin-left: 20px;
+}
+.lst-sns a {
+  display: block;
+  height: 100px;
+  line-height: 100px;
 }
