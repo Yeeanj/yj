@@ -9,6 +9,11 @@
   line-height: 1.5;
   color: #333;
 }
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: block;
+}
 
 .wrap {
   width: 1200px;
@@ -16,14 +21,9 @@
   background: #eee;
 }
 header {
-  /* overflow: auto; */
+  /* overflow: hidden; */
   padding: 20px 0;
   background: pink;
-}
-header::after {
-  content: "";
-  clear: both;
-  display: block;
 }
 header h1 {
   float: left;
@@ -34,11 +34,6 @@ header nav {
 header nav ul {
   padding-top: 20px 10px;
   background: orange;
-}
-header nav ul::after {
-  content: "";
-  clear: both;
-  display: block;
 }
 header nav li {
   float: left;
