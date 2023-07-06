@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>slick | css</title>
+    <link rel="stylesheet" href="./dist/slick/slick.css" />
+    <link rel="stylesheet" href="./dist/slick/slick-theme.css" />
+    <link
+      rel="stylesheet"
+      href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css"
+    />
+  </head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      text-decoration: none;
+      box-sizing: border-box;
+      line-height: 1.5;
+      color: #333;
+    }
+  </style>
+  <body>
+    <h1>slick</h1>
+    <div class="sec-slide">
+      <div>
+        <img
+          src="https://images.unsplash.com/photo-1682687981630-cefe9cd73072?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1471&q=80"
+          alt="see"
+        />
+      </div>
+      <div>
+        <img
+          src="https://images.unsplash.com/photo-1688345779794-99a4d0917381?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1469&q=80"
+          alt="foot"
+        />
+      </div>
+      <div>
+        <img
+          src="https://images.unsplash.com/photo-1688309100087-241909eaea3b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+          alt="rainbow"
+        />
+      </div>
+    </div>
+    <style>
+      .sec-slide {
+        width: 60%;
+        margin: 0 auto;
+      }
+      .sec-slide img {
+        width: 100%;
+      }
+      .slick-prev,
+      .slick-next {
+        background: skyblue;
+      }
+      .slick-prev:hover,
+      .slick-next:hover {
+        background: yellow;
+      }
+      .slick-arrow {
+        z-index: 100;
+        width: 48px;
+        height: 48px;
+        background: #eee;
+        border-radius: 50%;
+      }
+      .slick-arrow::before {
+        font-family: "Line Awesome Free";
+        font-weight: 900;
+        color: black;
+        font-size: 1.5rem;
+      }
+      .slick-prev {
+        left: -35px;
+      }
+      .slick-prev:before {
+        content: "\f104";
+      }
+      .slick-next {
+        right: -35px;
+      }
+      .slick-next:before {
+        content: "\f105";
+      }
+      .slick-dots li.slick-active button:before {
+        color: aqua;
+      }
+    </style>
+    <script
+      type="text/javascript"
+      ;
+      src="//code.jquery.com/jquery-1.11.0.min.js"
+      ;
+    ></script>
+    <script
+      type="text/javascript"
+      ;
+      src="//code.jquery.com/jquery-migrate-1.2.1.min.js"
+      ;
+    ></script>
+    <script src="./dist/slick/slick.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $(".sec-slide").slick({
+          infinite: true,
+          dots: true,
+        });
+      });
+    </script>
+  </body>
+</html>
