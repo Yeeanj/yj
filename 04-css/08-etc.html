@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Etc | cdd</title>
+  </head>
+  <body>
+    <h1>tooltip</h1>
+    <div class="tooltip-wrap">
+      tooltip 보기
+      <div class="tooltip-item">Lorem ipsum dolor sit amet consectetur.</div>
+    </div>
+    <style>
+      .tooltip-wrap {
+        display: inline-block;
+        position: relative;
+        margin: 100px;
+        font-weight: bold;
+        font-size: 20px;
+        color: blueviolet;
+      }
+      .tooltip-item {
+        position: absolute;
+        top: 50%;
+        right: -130%;
+        transform: translateY(-50%);
+        display: inline-flex; /* or inline-block */
+        max-width: 100px;
+        padding: 5px 10px;
+        font-size: 12px;
+        font-weight: normal;
+        color: #fff;
+        background: #555;
+        border-radius: 5px;
+      }
+    </style>
+  </body>
+</html>
