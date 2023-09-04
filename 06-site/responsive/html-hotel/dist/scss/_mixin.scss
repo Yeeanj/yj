@@ -28,7 +28,7 @@
   opacity: 1;
 }
 
-// 말줄임
+// 1줄 말줄임
 @mixin ell {
   display: inline-block;
   overflow: hidden;
@@ -36,7 +36,7 @@
   white-space: nowrap;
   vertical-align: middle;
 }
-//2줄 말줄임
+// 2줄 말줄임
 @mixin ell2 {
   display: inline-block;
   overflow: hidden;
@@ -85,4 +85,41 @@
   bottom: $b;
   left: $l;
   right: $r;
+}
+
+// width 1440px 이하일 경우
+@media screen and (max-width: 1440px) {
+  body {
+    background-color: blue;
+  }
+}
+// width 1280px 이하일 경우
+@media screen and (max-width: 1280px) {
+  body {
+    background-color: red;
+  }
+}
+// *** width 1024px 이하일 경우 (tablret)
+@media screen and (max-width: 1024px) {
+  body {
+    background-color: orange;
+  }
+}
+// width 744px 이하일 경우
+@media screen and (max-width: 744px) {
+  body {
+    background-color: greenyellow;
+  }
+}
+// *** width 428px 이하일 경우 (mobaile)
+@media screen and (max-width: 428px) {
+  body {
+    background-color: violet;
+  }
+}
+// width 360px 이하일 경우
+@media screen and (max-width: 360px) {
+  body {
+    background-color: blueviolet;
+  }
 }

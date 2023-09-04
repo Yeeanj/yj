@@ -1,27 +1,56 @@
 @charset "UTF-8";
 @import "variables", "mixin", "reset";
 
-// comm.css(scss) -
-// 공통요소 : 헤더, 풋터, 버튼, 아이콘, 박스
+// comm.scss(css) -
+// 공통요소 : header, footer, button, icon, box
 
-// 공통클래스
-$hdWidth: 200px;
+// 공통
+$hdWidth: 190px;
+$utilHeight: 40px;
+
+// layout
 .wrap {
+  position: relative;
   display: flex;
   height: 100vh;
 }
-.header {
+#header {
   display: flex;
   flex-direction: column;
   width: $hdWidth;
-  background: #eee;
   padding: 40px 0;
+  background: $w;
 }
-.main {
+#main {
   width: calc(100% - $hdWidth);
-  background: lightskyblue;
+  padding-top: 40px;
+}
+@media screen and (max-width: 1440px) {
+  .wrap {
+    display: block;
+  }
+  #header {
+    flex-direction: block;
+    width: 100%;
+    padding: 0;
+    background: lightblue;
+    .inner {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+  #main {
+    width: 100%;
+    padding: 0;
+  }
 }
 
+//header
+.inner {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
 #logo {
   a {
     display: block;
@@ -32,17 +61,18 @@ $hdWidth: 200px;
     text-indent: -9999px;
   }
 }
+
 #gnb {
   width: 100px;
-  margin: 55px auto 0;
+  margin: 70px auto 0;
   .depth1 {
-    display: block;
     a {
       display: block;
-      padding: 8px 20px;
+      padding: 7px 20px;
     }
   }
 }
+
 .spot {
   margin-top: auto;
   .spot-g {
@@ -53,41 +83,166 @@ $hdWidth: 200px;
       padding: 10px;
     }
   }
-  .conact {
+  .contact {
     a {
       position: relative;
-      font-size: 12px;
-      &::before {
-        @include posY;
-        left: 0;
-        content: "";
-        width: 1px;
-        height: 10px;
-        background: #000;
-      }
+      font-size: 0.75rem;
       &:first-child::before {
         display: none;
+      }
+      &::before {
+        content: "";
+        @include posY;
+        left: 0;
+        width: 1px;
+        height: 10px;
+        background: red;
       }
     }
   }
   .sns {
     a {
       display: block;
-      width: 30px;
+      width: 31px;
       height: 29px;
       padding: 0;
       text-indent: -9999px;
     }
     .facebook {
-      background: url(../../images/sns3.png) no-repeat 0 0;
+      background: url(../../images/sns3.png) 0 0 no-repeat;
     }
     .twitter {
-      background: url(../../images/sns4.png) no-repeat 0 0;
+      background: url(../../images/sns4.png) 0 0 no-repeat;
     }
     .instagram {
-      background: url(../../images/sns5.png) no-repeat 0 0;
+      background: url(../../images/sns5.png) 0 0 no-repeat;
     }
   }
 }
 
-@import "main", "contents";
+.util {
+  position: absolute;
+  top: 0;
+  left: $hdWidth;
+  right: 0;
+  height: $utilHeight;
+  background: $b;
+}
+
+@media screen and (max-width: 1440px) {
+  #logo {
+    padding: 30px 0 0 25px;
+    a {
+      display: block;
+      width: 250px;
+      height: 50px;
+      background: url(../../images/logo2.png) 0 0 / contain no-repeat;
+    }
+  }
+  #gnb {
+    width: auto;
+    margin: 0;
+    .depth1 {
+      display: flex;
+      a {
+        height: 103px;
+        padding: 0 37px;
+        line-height: 103px;
+      }
+    }
+  }
+  .spot {
+    display: none;
+  }
+  .util {
+    position: static;
+    height: 50px;
+  }
+}
+//section
+.grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  height: calc(100vh - $utilHeight);
+}
+@media screen and (max-width: 1440px) {
+  .grid {
+    height: calc(100vh - 153px);
+  }
+}
+
+.box-g {
+  overflow: hidden;
+  position: relative;
+  height: 100%;
+  padding: 30px 20px;
+  strong {
+    text-transform: capitalize;
+  }
+  .tit-big {
+    position: absolute;
+    bottom: -32px;
+    right: -1px;
+    font-size: 6.25rem;
+    font-weight: 900;
+    color: rgba($w, 0.9);
+    letter-spacing: -3px;
+  }
+}
+.box-1 {
+  grid-column: 1 / span 3;
+  grid-row: 1 / span 2;
+  background: url(../../images/pic1.jpg) 50% 50% / cover no-repeat;
+}
+.box-2 {
+  grid-column: 4 / span 2;
+  background: pink;
+}
+.box-3 {
+  background: #c6f6fa;
+  &::after {
+    content: "\f2f9";
+    position: absolute;
+    bottom: -39px;
+    right: -9px;
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    font-size: 6.25rem;
+    animation: fa-spin 2s infinite linear;
+  }
+}
+@keyframes fa-spin {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.box-4 {
+  background: rgba($prim1, 0.7);
+}
+.box-5 {
+  background: rgba($prim1, 0.6);
+}
+.box-6 {
+  grid-column: 2 / span 2;
+  background: rgba($prim1, 0.5);
+}
+.box-7 {
+  background: rgba($prim1, 0.4);
+}
+.box-8 {
+  background: rgba($prim1, 0.3);
+}
+.box-9 {
+  grid-column: 1 / span 2;
+  background: rgba($prim1, 0.2);
+}
+.box-10 {
+  background: rgba($prim1, 1);
+}
+.box-11 {
+  background: rgba($prim1, 0.9);
+}
