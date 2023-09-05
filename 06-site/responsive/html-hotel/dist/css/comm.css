@@ -305,14 +305,18 @@ legend {
   position: relative;
   display: flex;
   height: 100vh;
+  transition: all 0.3s;
 }
 
 #header {
-  display: flex;
-  flex-direction: column;
   width: 190px;
   padding: 40px 0;
   background: #fff;
+}
+#header .inner {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
 #main {
@@ -325,26 +329,20 @@ legend {
     display: block;
   }
   #header {
-    flex-direction: block;
+    display: block;
     width: 100%;
     padding: 0;
-    background: lightblue;
   }
   #header .inner {
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
   }
   #main {
     width: 100%;
-    padding: 0;
+    padding-top: 0;
   }
 }
-.inner {
-  display: flex;
-  flex-direction: column;
-  height: 100vh;
-}
-
 #logo a {
   display: block;
   width: 150px;
@@ -422,10 +420,9 @@ legend {
     padding: 30px 0 0 25px;
   }
   #logo a {
-    display: block;
     width: 250px;
     height: 50px;
-    background: url(../../images/logo2.png) 0 0/contain no-repeat;
+    background: url(../../images/logo2.png) 0 0 no-repeat;
   }
   #gnb {
     width: auto;
@@ -454,11 +451,6 @@ legend {
   height: calc(100vh - 40px);
 }
 
-@media screen and (max-width: 1440px) {
-  .grid {
-    height: calc(100vh - 153px);
-  }
-}
 .box-g {
   overflow: hidden;
   position: relative;
@@ -543,4 +535,38 @@ legend {
 
 .box-11 {
   background: rgba(255, 202, 0, 0.9);
+}
+
+@media screen and (max-width: 1440px) {
+  .grid {
+    height: calc(100vh - 153px);
+  }
+}
+@media screen and (max-width: 1280px) {
+  .grid {
+    height: auto;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+  }
+  .box-g {
+    height: 233px;
+  }
+  .box-1 {
+    height: auto;
+  }
+  .box-2 {
+    grid-column: auto;
+  }
+  .box-6 {
+    grid-column: 3/span 2;
+  }
+  .box-7 {
+    grid-column: 1/span 2;
+  }
+  .box-9 {
+    grid-column: 4/span 1;
+  }
+  .box-10 {
+    grid-column: 1/span 2;
+  }
 }/*# sourceMappingURL=comm.css.map */

@@ -13,44 +13,44 @@ $utilHeight: 40px;
   position: relative;
   display: flex;
   height: 100vh;
+  transition: all 0.3s;
 }
 #header {
-  display: flex;
-  flex-direction: column;
   width: $hdWidth;
   padding: 40px 0;
   background: $w;
+  .inner {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
 }
 #main {
   width: calc(100% - $hdWidth);
   padding-top: 40px;
 }
+
 @media screen and (max-width: 1440px) {
   .wrap {
     display: block;
   }
   #header {
-    flex-direction: block;
+    display: block;
     width: 100%;
     padding: 0;
-    background: lightblue;
     .inner {
       display: flex;
+      flex-direction: row;
       justify-content: space-between;
     }
   }
   #main {
     width: 100%;
-    padding: 0;
+    padding-top: 0;
   }
 }
 
-//header
-.inner {
-  display: flex;
-  flex-direction: column;
-  height: 100vh;
-}
+// header
 #logo {
   a {
     display: block;
@@ -128,15 +128,13 @@ $utilHeight: 40px;
   height: $utilHeight;
   background: $b;
 }
-
 @media screen and (max-width: 1440px) {
   #logo {
     padding: 30px 0 0 25px;
     a {
-      display: block;
       width: 250px;
       height: 50px;
-      background: url(../../images/logo2.png) 0 0 / contain no-repeat;
+      background: url(../../images/logo2.png) 0 0 no-repeat;
     }
   }
   #gnb {
@@ -159,19 +157,16 @@ $utilHeight: 40px;
     height: 50px;
   }
 }
-//section
+
+// main
+
+// section
 .grid {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   grid-template-rows: repeat(4, 1fr);
   height: calc(100vh - $utilHeight);
 }
-@media screen and (max-width: 1440px) {
-  .grid {
-    height: calc(100vh - 153px);
-  }
-}
-
 .box-g {
   overflow: hidden;
   position: relative;
@@ -245,4 +240,38 @@ $utilHeight: 40px;
 }
 .box-11 {
   background: rgba($prim1, 0.9);
+}
+
+@media screen and (max-width: 1440px) {
+  .grid {
+    height: calc(100vh - 153px);
+  }
+}
+@media screen and (max-width: 1280px) {
+  .grid {
+    height: auto;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+  }
+  .box-g {
+    height: 233px;
+  }
+  .box-1 {
+    height: auto;
+  }
+  .box-2 {
+    grid-column: auto;
+  }
+  .box-6 {
+    grid-column: 3 / span 2;
+  }
+  .box-7 {
+    grid-column: 1 / span 2;
+  }
+  .box-9 {
+    grid-column: 4 / span 1;
+  }
+  .box-10 {
+    grid-column: 1 / span 2;
+  }
 }
