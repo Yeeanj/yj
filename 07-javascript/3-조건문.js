@@ -113,3 +113,79 @@ for (let i = 9; i > 0; i--) {
   }
   console.log(i);
 }
+
+// dog cat fish 배열로 만들어서 animalsA 변수에 할당
+const animalsA = ["dog", "cat", "fish", "lion"];
+
+console.log(animalsA[0]);
+console.log(animalsA[1]);
+console.log(animalsA[2]);
+
+// 배열의 길이 : animalsA.length
+for (let i = 0; i < animalsA.length; i++) {
+  console.log(animalsA[i]);
+}
+
+// for of문
+// for(변수 of 배열){
+//   실행문;
+// }
+
+for (let animal of animalsA) {
+  console.log(animal);
+}
+
+// 예시2
+const users = [
+  { name: "겨울", age: 2 },
+  { name: "여울", age: 8 },
+  { name: "가을", age: 1 },
+];
+console.log(users[0]);
+console.log(users[1]);
+console.log(users[2]);
+
+for (let i = 0; i < users.langth; i++) {
+  console.log(users[i]);
+}
+
+for (let user of users) {
+  console.log(user);
+  console.log(user.name);
+}
+
+// for in문
+// for(변수 in 객체){실행문;}
+
+const user = {
+  name: "겨울",
+  age: 2,
+  cute: true,
+};
+
+for (let key in user) {
+  console.log(key);
+  console.log(user[key]);
+}
+
+// while문
+// while (조건){실행문}
+
+// 0~9가지 출력
+let j = 0;
+
+while (j < 10) {
+  console.log(j);
+  j++;
+}
+
+// do while문
+// do {실행문} while (조건);
+
+// 0 ~ 9까지 출력
+let k = 0;
+
+do {
+  console.log(k);
+  k++;
+} while (k < 10);
