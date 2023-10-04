@@ -1,0 +1,30 @@
+@media (min-width: 576px) {
+  .navbar-expand-sm .navbar-collapse {
+    justify-content: flex-end;
+  }
+}
+:root {
+  --sm: 768px;
+  --md: 992px;
+  --lg: 1200px;
+  --bs-primary: rgb(207, 244, 252);
+  --bs-primary-rgb: 207, 244, 252;
+  --bs-bg-opacity: 1;
+}
+
+.section-g {
+  padding: 150px 0;
+}
+
+.wrap {
+  padding-top: 70px;
+}
+
+#header {
+  padding: 0 30px;
+  height: 70px;
+}
+
+#jumbotron {
+  height: 50vh;
+}/*# sourceMappingURL=comm.css.map */
